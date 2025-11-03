@@ -1,0 +1,179 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Login Container */
+.login-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 350px;
+    animation: slideIn 0.6s ease-in-out;
+}
+
+/* Slide-in Animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Heading */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 12px 12px 12px 40px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+    outline: none;
+}
+
+/* Input Icons */
+.input-icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 16px;
+}
+
+/* Icons for Inputs */
+.input-icon.email::before {
+    content: "📧";
+}
+
+/* User Icon */
+.input-icon.user::before {
+    content: "👤";
+}
+
+
+.input-icon.password::before {
+    content: "🔒";
+}
+
+/* Dropdown Styling */
+.input-container select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    appearance: none;
+    background-color: white;
+    font-size: 14px;
+    transition: border 0.3s ease;
+}
+
+.input-container select:hover {
+    border-color: #bbb;
+}
+
+.input-container select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+}
+
+/* Submit Button */
+button[type="submit"] {
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(45deg, #0056b3, #004494);
+    transform: scale(1.05);
+}
+
+/* Forgot Password Link */
+.forgot-password-link {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.forgot-password-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.forgot-password-link a:hover {
+    text-decoration: underline;
+}
+
+/* Register Link */
+.register-link {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #0056b3;
+}
+
+/* Mobile Responsive */
+@media (max-width: 400px) {
+    .login-container {
+        width: 90%;
+        padding: 30px;
+    }
+}
